@@ -4,14 +4,7 @@ import scala.io.StdIn.readInt
 
 object Q02 {
 
-  def GCD(a: Int, b: Int): Int = b match {
-    case 0 => a
-    case x if x > a => GCD(x, a)
-    case x => GCD(x, a % x)
-  }
-
   def isPrime(n: Int, i: Int = 2): Boolean = {
-
     if (n <= 2)
       if (n == 2) true
       else false
