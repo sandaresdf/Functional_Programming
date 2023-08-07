@@ -44,7 +44,7 @@ object CaesarCipher {
 
   def main(args: Array[String]): Unit = {
     "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"
-    var data: String = "The quick brown Fox Jumps over the lazy dog"
+    var data: String = "The quick brown Fox Jumps over the lazy dog#"
 
     var enDt: String = cipher(data, encrypt)
     println("Encrypted data: " + enDt)
