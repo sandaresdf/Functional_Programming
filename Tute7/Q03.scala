@@ -2,17 +2,16 @@ package Tute7
 
 object Q03 {
   val isPrime: Int => Boolean = n => {
-    if (n <= 1) false
-    else if (n <= 3) true
-    else if (n % 2 == 0 || n % 3 == 0) false
-    else {
-      var i = 5
-      while (i * i <= n) {
-        if (n % i == 0 || n % (i + 2) == 0) false
-        i += 6
-      }
-      true
+    var res = true
+    if (n < 2) {
+      res = false
     }
+    for (i <- 2 until n) {
+      if (n % i == 0) {
+        res = false
+      }
+    }
+    res
   }
 
   def filterPrime(numbers: List[Int]): List[Int] = {
@@ -20,8 +19,10 @@ object Q03 {
   }
 
   def main(args: Array[String]): Unit = {
-    val inputList = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    val inputList = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 49)
     val outputList = filterPrime(inputList)
     println(outputList)
+    println(isPrime(49))
   }
+
 }
