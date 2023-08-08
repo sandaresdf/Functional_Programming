@@ -1,7 +1,5 @@
 package Tute7
 
-import scala.util.control.Breaks.break
-
 object Q03 {
   val isPrime: Int => Boolean = n => {
     var res = true
