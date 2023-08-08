@@ -1,5 +1,7 @@
 package Tute7
 
+import scala.util.control.Breaks.break
+
 object Q03 {
   val isPrime: Int => Boolean = n => {
     var res = true
@@ -22,7 +24,6 @@ object Q03 {
     val inputList = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 49)
     val outputList = filterPrime(inputList)
     println(outputList)
-    println(isPrime(49))
   }
 
 }
