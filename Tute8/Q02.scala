@@ -10,7 +10,7 @@ object Q02 {
       val classifyNumber: Int => String = {
         case n if n <= 0 => "Negative/Zero"
         case n if n % 2 == 0 => "Even number"
-        case n => "Odd number"
+        case _ => "Odd number"
       }
 
       val result = classifyNumber(input)
